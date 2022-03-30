@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Code+Pro:wght@400&display=swap');
 
 
 * {
@@ -13,18 +13,11 @@
 body {
       width: 100%;
       height: auto;
-      background-color: rgb(75, 75, 75);
+      background: radial-gradient(ellipse at bottom, #013155 0%, #01162E 100%);
+      /* background-color: #023047; */
 }
 
-h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      z-index: 2;
-}
-p {
-      font-size: 1rem;
-}
-
+/* nav */
 header {
       width: 100%;
       height: 100vh;
@@ -63,6 +56,7 @@ h4 {
       margin: 1rem;
       list-style: none;
 }
+
 .menu ul li a {
       text-decoration: none;
       color: white;
@@ -72,12 +66,130 @@ h4 {
       color: aqua;
 }
 
-
-
 .menu-toggle .bar {
       width: 25px;
       height: 3px;
-      margin: 5px auto; 
+      margin: 5px auto;
       transition: all 0.3 ease-in-out;
       background-color: white;
+}
+
+/* main */
+main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      position: relative;
+      top: -35em;
+}
+
+.main-title h2 {
+      font-size: 3.5rem;
+      color: #a5a58d;
+      padding: 1rem;
+      letter-spacing: 2px;
+      position: relative;
+      top: -4rem;
+}
+
+.main-title h3 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #a5a58d;
+      padding: 1rem;
+}
+
+.main-title h4 {
+      font-size: 1.5rem;
+      color: #a5a58d;
+      padding: 1rem;
+}
+
+.main-title p {
+      font-size: 1.5rem;
+      padding: 1.5rem;
+      max-width: 100em;
+}
+
+.main-title button {
+      font-size: 1.2rem;
+      width: 200px;
+      margin: 2rem;
+      padding: 0.9rem 2rem;
+      border-radius: 5px;
+      box-shadow: 10px 10px 5px 2px #4895ef;
+      cursor: pointer;
+      transition: ease 0.3s;
+}
+
+.main-title button:hover {
+      font-size: 1.4rem;
+      box-shadow: 12px 12px 5px 2px #4895ef;
+}
+
+.icons {
+      display: flex;
+      width: 20%;
+      height: 4rem;
+      justify-content: space-around;
+      position: relative;
+      top: 6rem;
+}
+
+.icons,
+.icon {
+      text-decoration: none;
+      color: white;
+      font-size: 2em;
+      cursor: pointer;
+}
+
+.icons,
+.icon:hover {
+      color: #4361ee;
+}
+
+/* stars background animation */
+.starBackground {
+      min-height: 100vh;
+}
+
+.star {
+      position: absolute;
+      background: white;
+      border-radius: 50px;
+      animation: move;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      z-index: 1;
+}
+
+​ .type-1 {
+      width: 1px;
+      height: 1px;
+}
+
+.type-2 {
+      width: 2px;
+      height: 2px;
+}
+
+.type-3 {
+      width: 3px;
+      height: 3px;
+}
+
+@keyframes move {
+      0% {
+            transform: translateY(0);
+      }
+
+      100% {
+            transform: translateY(-1000px);
+      }
 }
