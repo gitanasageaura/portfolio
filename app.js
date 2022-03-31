@@ -1,5 +1,3 @@
-
-
 const stars = document.getElementById('stars');
 
 if (stars) {
@@ -13,11 +11,13 @@ if (stars) {
                document.body.appendChild(star);
           }
      }
+
      function randomNumber(min, max) {
           return Math.floor(Math.random() * max) + min;
      }
-     
+
      createStars(1, 100);
      createStars(2, 80);
      createStars(3, 70);
 }
+
